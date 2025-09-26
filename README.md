@@ -1,10 +1,10 @@
 # Sorteo San Valentín en Hotel Disney 🏰
 
-Aplicación web sencilla creada con Django para el *backend*, Nuxt para el *frontend* y una pequeña base de datos local en un archivo SQLite llamado ```db.sqlite3```. Esta permite a los usuarios registrarse en un concurso para ganar 2 noches con todo pagado en el Hotel Disney (pequeña licencia creativa). Para confirmar su participación, los concursantes deben validarse y crear una contraseña a través del link que llega a sus correos. Por otro lado, el usuario administrador puede ver todos los participantes, lanzar el sorteo para decidir al ganador y eliminar todos los usuarios para volver a crear otro sorteo. Hay una demostración disponible en el video `Demo.mov`.
+Aplicación web sencilla creada con Django para el *backend*, Nuxt para el *frontend* y una pequeña base de datos local en un archivo SQLite llamado ```db.sqlite3```. Esta permite a los usuarios registrarse en un concurso para ganar 2 noches con todo pagado en el Hotel Disney (pequeña licencia creativa). Para confirmar su participación, los concursantes deben validarse y crear una contraseña a través del link que llega a sus correos. Por otro lado, el usuario administrador puede ver todos los participantes, lanzar el sorteo para decidir al ganador y eliminar todos los usuarios para volver a crear otro sorteo. Hay una demostración disponible en el video `Demo.mov` guardado en la carpeta `docs`.
 
 ## Guía de instalación manual
 
-### Backend
+### Backend
 ```sh
 cd backend
 
@@ -35,6 +35,7 @@ sqlite> .quit
 python manage.py runserver 8000
 
 # Redis (terminal 2)
+# La instalación de Redis puede variar según SO
 source venv/bin/activate
 brew services start redis
 redis-server
@@ -362,5 +363,6 @@ NUXT_ENV=development
 - Implementar API Rate Limiting con Load Balancer para manejar alta demanda
 - Orquestación de contenedores con Cloud Run o Kubernetes
 - Uso de certificados SSL/TLS para comunicación segura
+- Mejoras visuales como cambiar emojis por iconos más precisos
 
 > Desarrollado con mucha cafeína por Max Yáñez 
