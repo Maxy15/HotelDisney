@@ -78,6 +78,23 @@ npx nuxt prepare
 # Levantar frontend
 npm run dev
 ```
+## API endpoints
+
+### Públicos
+| Método | Endpoint                          | Descripción         |
+| ------ | --------------------------------- | ------------------- |
+| `GET`  | `/api/health/`                    | Health check        |
+| `POST` | `/api/users/register/`            | Registro de usuario |
+| `GET`  | `/api/users/token/?token={token}` | Validar token       |
+| `POST` | `/api/users/set-password/`        | Crear contraseña    |
+
+### Admin (requiere Bearer token)
+| Método   | Endpoint                | Descripción     |
+| -------- | ----------------------- | --------------- |
+| `POST`   | `/api/admin/login/`     | Login admin     |
+| `GET`    | `/api/admin/all-users/` | Listar usuarios |
+| `GET`    | `/api/admin/winner/`    | Realizar sorteo |
+| `DELETE` | `/api/admin/clear-db/`  | Limpiar BD      |
 
 ## Documentación API
 
@@ -297,11 +314,11 @@ Authorization: Bearer {token}
 ## Requisitos
 - **Docker** si se desea utilizar los contenedores de cada parte de la aplicación
 - **Git** para clonar el repositorio
-    - Puertos disponibles: `3000` (frontend), `8000` (backend), `6379` (Redis)
+  - Puertos disponibles: `3000` (frontend), `8000` (backend) y `6379` (Redis)
 
 ## Ejemplos de variables de entorno
 
-## Backend
+### Backend
 ```sh
 # Django
 DEBUG=1
@@ -346,6 +363,7 @@ NUXT_ENV=development
 ```
 
 ## Administrador
+Las credenciales del usuario administrador son creados por el archivo `seeds.py` ubicado en la carpeta `/backend/api/`. Estan son las siguientes:
 - **Email**: `admin@cts.cl`
 - **Contraseña**: `adminglobal`
 
@@ -363,6 +381,6 @@ NUXT_ENV=development
 - Implementar API Rate Limiting con Load Balancer para manejar alta demanda
 - Orquestación de contenedores con Cloud Run o Kubernetes
 - Uso de certificados SSL/TLS para comunicación segura
-- Mejoras visuales como cambiar emojis por iconos más precisos
+- Mejoras iconografía UI (por temas de tiempo ahora son emojis)
 
-> Desarrollado con mucha cafeína por Max Yáñez 
+> Desarrollado con mucha cafeína por Max Yáñez ☕
