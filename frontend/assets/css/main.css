@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Custom component styles if needed */
+  .valentine-gradient {
+    background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f9a8d4 100%);
+  }
+  
+  .disney-gradient {
+    background: linear-gradient(135deg, #fdedd3 0%, #fbd7a5 50%, #f8bb6d 100%);
+  }
+  
+  .magic-gradient {
+    background: linear-gradient(135deg, #ec4899 0%, #f59433 50%, #e11d48 100%);
+  }
+}
+
+@layer utilities {
+  /* Custom utility classes */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-sparkle {
+    animation: sparkle 2s linear infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0px); 
+    }
+    50% { 
+      transform: translateY(-20px); 
+    }
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { 
+      opacity: 0.3; 
+      transform: scale(0.8); 
+    }
+    50% { 
+      opacity: 1; 
+      transform: scale(1.2); 
+    }
+  }
+
+  /* Scrollbar styling for admin tables */
+  .admin-table::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .admin-table::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+  }
+  
+  .admin-table::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+  
+  .admin-table::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}

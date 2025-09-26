@@ -1,0 +1,25 @@
+{
+  "name": "cts-sorteo-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.8.0",
+    "@nuxtjs/tailwindcss": "^6.8.4"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.16",
+    "@heroicons/vue": "^2.0.18",
+    "@vueuse/nuxt": "^10.5.0",
+    "axios": "^1.6.2",
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue": "^3.3.8"
+  }
+}
